@@ -8,7 +8,7 @@ The automation suite is designed to validate a test contact form, covering both 
 
 ## Requirements
 
-You must have Java 21 or later installed on your machine You can download it
+You must have Java 17 or later installed on your machine You can download it
 here: [https://www.java.com/en/download/manual.jsp](https://www.java.com/en/download/manual.jsp)
 
 #### Dependencies
