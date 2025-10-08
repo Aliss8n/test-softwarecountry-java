@@ -16,13 +16,13 @@ public class BreedsValidator {
         Assertions.assertFalse(breedsResponse.getData().isEmpty(), "Data list should not be empty");
         Assertions.assertEquals(breedsResponse.getTo(), breedsResponse.getData()
                 .size(), "Incorrect number of breeds returned in current page");
-        Assertions.assertNotNull(breedsResponse.getData().getFirst().getBreed(), "First breed name should not be null");
-        Assertions.assertNotNull(breedsResponse.getData().getFirst()
+        Assertions.assertNotNull(breedsResponse.getData().get(0).getBreed(), "First breed name should not be null");
+        Assertions.assertNotNull(breedsResponse.getData().get(0)
                                          .getCountry(), "First breed country should not be null");
-        Assertions.assertNotNull(breedsResponse.getData().getFirst()
+        Assertions.assertNotNull(breedsResponse.getData().get(0)
                                          .getOrigin(), "First breed origin should not be null");
-        Assertions.assertNotNull(breedsResponse.getData().getFirst().getCoat(), "First breed coat should not be null");
-        Assertions.assertNotNull(breedsResponse.getData().getFirst()
+        Assertions.assertNotNull(breedsResponse.getData().get(0).getCoat(), "First breed coat should not be null");
+        Assertions.assertNotNull(breedsResponse.getData().get(0)
                                          .getPattern(), "First breed pattern should not be null");
         Assertions.assertTrue(breedsResponse.getFirst_page_url().contains("?page=1"), "Invalid first_page_url");
         if (breedsResponse.getPer_page() > breedsResponse.getTotal())
